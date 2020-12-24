@@ -5,7 +5,7 @@
     }
     .tree:nth-child(3){
         display: block;
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .bottom-snow{
         height: 40%;
@@ -48,7 +48,7 @@
     }
     .tree:nth-child(3){
         display: block;
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .bottom-snow{
         height: 40%;
