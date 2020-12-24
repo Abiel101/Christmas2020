@@ -22,6 +22,11 @@
     .music{
         display: none;
     }
+    
+     .snow1, .snow2{
+        height: 200%;
+    }
+    
     @keyframes glow {
         0%{
             text-shadow: 0 0 10px rgb(172, 65, 65);
@@ -64,6 +69,9 @@
         margin: 0 auto;
         bottom: 0;
         right: 26%;
+    }
+     .snow1, .snow2{
+        height: 200%;
     }
     
     @keyframes glow {
