@@ -1,11 +1,11 @@
-@media only screen and (min-width: 300px){
+@media only screen and (max-width: 400px){
     .tree{
         display: none;
         margin: 0 auto;
     }
     .tree:nth-child(3){
         display: block;
-        font-size: 1.5em;
+        font-size: 10px;
     }
     .bottom-snow{
         height: 40%;
