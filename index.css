@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+body{
+    background-color: #222222;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    color: rgb(245, 245, 245);
+    font-family: 'Dancing Script', cursive;
+}
+.merry-christmas-message{
+    display: none;
+}
+/* music that is playing in the background */
+.music{
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    right: 20px;
+    width: 300px;
+    height: 150px;
+}
+
+/* sizing and separate styling for trees to get different sizes on each tree */
+.tree{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 100;
+    font-family: 'Quicksand';
+    display: inline-block;
+    margin-left: 10%;
+    margin-bottom: 0;
+}
+.tree:nth-child(2){
+    font-size: 2.5rem;
+    margin-left: 15%;
+}
+.tree:last-child{
+    font-size: 2rem;
+    margin-left: 15%;
+}
+
+/* separation of the top and bottom of the trees */
+.top{
+ color: rgb(9, 158, 133);
+ animation: blinking infinite 3s ease-in-out;
+}
+.bottom{
+    color: white;
+}
+
+ /* this is the ground */
+.bottom-snow{
+    background-color: white;
+    position:absolute;
+    z-index: 1;
+    width: 100%;
+    height: 10%;
+}
+
+/* glowing animation for trees */
+@keyframes blinking{
+    0%{
+        color: rgb(9, 158, 133);
+        text-shadow: 0 0 10px rgb(9, 158,133);
+    }
+    50%{
+        color: rgb(50, 255, 221);
+        text-shadow: 0 0 50px rgb(50, 255,221);
+    }
+    100%{
+        color: rgb(9, 158, 133);
+        text-shadow: 0 0 10px rgb(9, 158,133);
+    }
+}
+
+/* Styling the present */
+.present{
+    width: 410px;
+    position: absolute;
+    z-index: 2;
+    right: 100px;
+}
+
+/* Lid and box styling from line 86-126 */
+.box, .lid{
+    background: 
+    radial-gradient(white 15%, transparent 15.1%),
+    rgb(240, 58, 58);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    position: relative;
+    margin: 0 auto;
+}
+.box{
+    width: 400px;
+    height: 250px;
+}
+.lid{
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 70px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0 2px;
+    background-color: rgb(216, 52, 52);
+    transition: 
+        top ease-out 0.5s,
+        left ease-out 0.5s,
+        transform ease-out 0.5s
+        ;
+}
+
+/* Ribben styles */
+.box span, .lid span{
+    position: absolute;
+    display: block;
+    background-color: rgba(235, 199, 0, 0.8);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+.box span:first-child{
+        width: 100%;
+        height: 60px;
+        top: 80px;
+}
+.box span:last-child, .lid span{
+    width: 60px;
+    height: 100%;
+    left: 170px;
+}
+.lid span{
+    left: 172px; /* this is here because the lids ribbon position is a little off because of the padding that we added so its bigger than the bottom part of the box */
+}
+
+/* aligning and positioning the text so it disapears inside the box */
+.message{
+    position: relative;
+    top: 10px;
+    height: 0;
+    text-align: center;
+    transition: all ease-out 0.7s; /* this is for a smooth transition on the present's text */
+}
+.message h1{
+    font-size: 50px;
+    margin: 0;
+    animation: glow infinite 2s ease-in-out;
+}
+
+/* The hover effects for the present lid and text message*/
+.present:hover .lid{
+    top: -100px;
+    transform: rotateZ(10deg);
+    left: 10px;
+}
+.present:hover .message{
+    top: -80px;
+}
+
+@keyframes glow {
+    0%{
+        text-shadow: 0 0 10px rgb(172, 65, 65);
+    }
+    50%{
+        text-shadow: 0 0 30px rgb(179, 28, 28);
+    }
+    100%{
+        text-shadow: 0 0 10px rgb(172, 65, 65);
+    }
+}

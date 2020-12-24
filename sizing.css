@@ -1,0 +1,88 @@
+@media only screen and (max-width: 600px){
+    .tree{
+        display: none;
+        margin: 0 auto;
+    }
+    .tree:nth-child(3){
+        display: block;
+        font-size: 2em;
+    }
+    .bottom-snow{
+        height: 40%;
+    }
+    .merry-christmas-message{
+        text-align: center;
+        display: block;
+        text-shadow: 0 0 10px rgb(173, 79, 79);
+        animation: glow infinite 1s ease-in-out;
+    }
+    .present{
+        display: none;
+    }
+    .music{
+        display: none;
+    }
+    @keyframes glow {
+        0%{
+            text-shadow: 0 0 10px rgb(172, 65, 65);
+        }
+        50%{
+            text-shadow: 0 0 30px rgb(179, 28, 28);
+        }
+        100%{
+            text-shadow: 0 0 10px rgb(172, 65, 65);
+        }
+    }
+
+}
+
+@media only screen and (max-width: 900px){
+    .tree{
+        display: none;
+        margin: 0 auto;
+    }
+    .tree:nth-child(3){
+        display: block;
+        font-size: 2em;
+    }
+    .bottom-snow{
+        height: 40%;
+    }
+    .merry-christmas-message{
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+        animation: glow infinite 2s ease-in-out;
+    }
+
+    .present{
+        display: none;
+    }
+    .music{
+        width: 400px;
+        height: 200px;
+        margin: 0 auto;
+        bottom: 0;
+        right: 26%;
+    }
+    
+    @keyframes glow {
+        0%{
+            text-shadow: 0 0 10px rgb(172, 65, 65);
+        }
+        50%{
+            text-shadow: 0 0 30px rgb(179, 28, 28);
+        }
+        100%{
+            text-shadow: 0 0 10px rgb(172, 65, 65);
+        }
+    }
+}
+@media only screen and (min-width: 1000px){
+    .bottom-snow{
+        height: 25%;
+    }
+    .music{
+        display: none;
+    }
+}
